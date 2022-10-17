@@ -1,0 +1,10 @@
+<ul>
+  <% myDinos.forEach((dino, idx) => { %>
+  <li><%= dino.name %> is a <%= dino.type %>
+      <a href="/dinosaurs/<%= idx %>/?_method=DELETE">Edit</a>
+      <form method="POST" action="/dinosaurs/<%= idx %>/?_method=DELETE">
+          <input type="submit" value="Delete Dino">
+      </form>
+  </li>
+  <% }); %>
+</ul>
